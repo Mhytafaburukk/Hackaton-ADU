@@ -3,6 +3,7 @@ function DigitalClock() {
     const [time, setTime] = useState(new Date());
     const [Isvisible, setIsVisible] = useState(true);
     const [alarms , setAlarms] = useState([]);
+    const [Isvisible2, setIsVisible2] = useState(false);
 
     useEffect(() => {
         const IntervalId = setInterval(() => {
@@ -135,6 +136,20 @@ function DigitalClock() {
     </div>
   </>
   )}
+                {Isvisible2 && (
+      
+        <div className='To-Do-List'>
+               <h1>To Do List</h1>
+     <input value={newtask} placeholder='Please enter a task' onChange={handleInputchange}></input> <button className='Add-button' onClick={handleAddtoTasks}>Add</button>
+     <ul>
+        {tasks.map((task,index) => <li key={index}>
+            {task} <button className='Delete-button' onClick={() => handleDeleteTask(index)}>Delete</button>
+            <button className='Move-button' onClick={() => handleUpMove(index)}>Up</button> <button className='Move-button' onClick={() => handleDownMove(index)}>Down</button>
+        </li>)}
+     </ul>
+        </div>
+        
+      )}
     </div>
     </>
   );
