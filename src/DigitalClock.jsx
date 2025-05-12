@@ -34,6 +34,9 @@ function DigitalClock() {
     function Alarmfunction() {
         setIsVisible(!Isvisible);
     }
+    function ToDoListfunction() {
+        setIsVisible2(!Isvisible2);
+    }
     function SetAlarmFunction() {
     const hour = prompt("Set a new hour (1-12)");
     const minute = prompt("Set a new minute (00-59)");
