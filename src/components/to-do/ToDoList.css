@@ -1,6 +1,11 @@
 .todo-container {
-  margin-top: 20px;
-  background-color: blanchedalmond;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 .task-item {
