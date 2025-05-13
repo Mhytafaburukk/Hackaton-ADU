@@ -16,9 +16,8 @@ function DigitalClock() {
   const [newtask, setNewTask] = useState("");
   const [stopwatch, setStopwatch] = useState(0);
   const [running, setRunning] = useState(false);
-  const [background, setBackground] = useState(bg1); // background state
+  const [background, setBackground] = useState(bg1);
 
-  // Local Storage'den verileri al
   useEffect(() => {
     const savedAlarms = JSON.parse(localStorage.getItem("alarms")) || [];
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -26,7 +25,6 @@ function DigitalClock() {
     setTasks(savedTasks);
   }, []);
 
-  // Local Storage'e verileri kaydet
   useEffect(() => {
     localStorage.setItem("alarms", JSON.stringify(alarms));
     localStorage.setItem("tasks", JSON.stringify(tasks));
